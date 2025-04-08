@@ -21,6 +21,7 @@ BREATHING = "breathing"
 HAND_TRACKING = "hand_tracking"
 Memory = "Memory"
 CREDITS = "credits"
+GAMES_MENU = "games_menu"
 
 
 button_width = 400
@@ -30,13 +31,16 @@ start_x = (WIDTH - button_width) // 2
 start_y = (HEIGHT - (4 * button_height + 3 * button_spacing) - 250) // 2
 
 
-buttons = [
+Main_Menu = [
+    Button(start_x, start_y + 2 *(button_height + button_spacing), button_width, button_height, "Credits", CREDITS),
+    Button(start_x, start_y + 3 * (button_height + button_spacing), button_width, button_height, "Quit", "quit"),
+    Button(start_x, start_y + (button_height + button_spacing), button_width, button_height,"Games", GAMES_MENU)
+]
+
+Games = [
     Button(start_x, start_y, button_width, button_height, "Breathing Exercise", BREATHING),
     Button(start_x , start_y + 2 * (button_height + button_spacing), button_width, button_height, "Memory game", Memory),
-    Button(start_x, start_y + button_height + button_spacing, button_width, button_height, "Hand Tracking",
-           HAND_TRACKING),
-    Button(start_x, start_y + 3 * (button_height + button_spacing), button_width, button_height, "Credits", CREDITS),
-    Button(start_x, start_y + 4 * (button_height + button_spacing), button_width, button_height, "Quit", "quit")
+    Button(start_x, start_y + button_height + button_spacing, button_width, button_height, "Hand Tracking",HAND_TRACKING)
 
 ]
 
